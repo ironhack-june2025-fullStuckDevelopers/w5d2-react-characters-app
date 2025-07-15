@@ -1,4 +1,6 @@
+import { Route, Routes } from "react-router-dom"
 import HomePage from "./pages/HomePage"
+import CharacterDetails from "./pages/CharacterDetails"
 
 function App() {
 
@@ -6,7 +8,12 @@ function App() {
     <>
       <h1>React Characters App</h1>
 
-      <HomePage />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/characters/:characterId" element={<CharacterDetails />} />
+      </Routes>
+
+      
 
     </>
   )
